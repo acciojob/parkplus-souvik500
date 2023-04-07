@@ -33,11 +33,14 @@ public class Payment
         return id;
     }
 
+
+
     public void setId(int id) {
         this.id = id;
     }
 
-    public Boolean getPaymentCompleted() {
+
+    public boolean isPaymentCompleted() {
         return paymentCompleted;
     }
 
