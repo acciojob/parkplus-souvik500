@@ -30,10 +30,10 @@ public class PaymentServiceImpl implements PaymentService {
             payment.setPaymentMode(PaymentMode.valueOf(mode));
 
             int perHrBill = reservation.getSpot().getPricePerHour();
-            if (reservation.getNoOfHours() * perHrBill > amountSent) throw new Exception("Insufficient Amount");
+            if (reservation.getNumberOfHours() * perHrBill > amountSent) throw new Exception("Insufficient Amount");
 
             else {
-                payment.setPaymentCompleted(true);
+                payment.setIsPaymentCompleted(true);
             }
             payment.setReservation(reservation);
         }

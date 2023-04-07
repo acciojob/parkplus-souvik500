@@ -52,12 +52,12 @@ public class ReservationServiceImpl implements ReservationService {
 //            spotList.add(spot);
 //        }
         Payment payment = new Payment();
-        payment.setPaymentCompleted(true);
+        payment.setIsPaymentCompleted(true);
         payment.setPaymentMode(PaymentMode.CASH);
 
         Reservation reservation = new Reservation();
         reservation.setUser(user);
-        reservation.setNoOfHours(timeInHours);
+        reservation.setNumberOfHours(timeInHours);
         payment.setReservation(reservation);
 
         for (Spot spot : parkingLot.getSpotList())
