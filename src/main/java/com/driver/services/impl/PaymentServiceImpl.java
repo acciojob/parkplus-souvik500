@@ -33,7 +33,7 @@ public class PaymentServiceImpl implements PaymentService {
             if (reservation.getNumberOfHours() * perHrBill > amountSent) throw new Exception("Insufficient Amount");
 
             else {
-                payment.setIsPaymentCompleted(true);
+                payment.setPaymentCompleted(true);
             }
             payment.setReservation(reservation);
         }

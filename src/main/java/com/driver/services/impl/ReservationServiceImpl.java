@@ -52,7 +52,7 @@ public class ReservationServiceImpl implements ReservationService {
 //            spotList.add(spot);
 //        }
         Payment payment = new Payment();
-        payment.setIsPaymentCompleted(true);
+        payment.setPaymentCompleted(true);
         payment.setPaymentMode(PaymentMode.CASH);
 
         Reservation reservation = new Reservation();
